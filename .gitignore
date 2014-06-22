@@ -12,3 +12,4 @@ data/*
 *.Rproj
 .RData
 *.swp
+*.csv
