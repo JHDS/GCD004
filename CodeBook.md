@@ -27,7 +27,6 @@ Using the "features" variable, the data set was subsetted to include on the
 data points of interest.
 
 ## 3. Labelling
-
 Two columns were added to the "front" of the data set, one for the Subject code
 and one for the Activity code. In both cases the respective files
 (subject_*.txt, y_*.txt) were concatenated in the same manner as the actual
@@ -35,3 +34,8 @@ data sets, and then added to the data frame.  Activity codes were then replaced
 with their descriptive names from the activity_labels.txt file.
 
 Finally, the column headers were added using the labels in the features.txt file.
+
+## Variable Names
+* Subject - A numeric code corresponding to a participant in the study.
+* Activity - One of: "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LYING"
+* Feature Variables - The remaining variable names are taken from the source data "features.txt" file.
