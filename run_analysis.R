@@ -5,7 +5,7 @@
 #####
 # PART 1 - Cleaning up the source data
 
-# Merge the training and test data sets.
+# Concatenate the training and test data sets.
 my.data <- rbind(read.table("data/train/X_train.txt", colClasses = "numeric"),
                  read.table("data/test/X_test.txt", colClasses = "numeric"))
 
@@ -44,25 +44,21 @@ names(my.data) <- c("Subject","Activity",column.names[features, 2])
 
 write.table(my.data, file="GCD004-part1.csv", sep=",", row.names=FALSE)
 
-#print(my.data[1:5,1:5])
-#print(dim(my.data))
 
 #####
 # PART 2 - Table of Averages
-# create a second data set with the avg of each variable for each activity
-# and each subject.
 
 # starting point: my.data is a tidy data set representing four dimensions of
-# data: a two dimensional matrix of data points for each combination of one of
-# 30 subjects and one of 6 activities.
+# data: a two dimensional matrix of data points for each combination of 1-of-30
+# subjects and 1-of-6 activities.
 
 # end result: A two dimensional data set, 1 row per subject-activity pair with
-# mean() values for each feature
+# mean() values for each feature.
 
 # for each subject:
 #   for each activity:
-#     calculate the mean of each feature vector
-#     rbind the results to the new data set
+#     calculate the column means of each feature
+#     rbind the results to a new data set
 
 my.data2 <- data.frame()
 for (subject in c(1:30)) {
