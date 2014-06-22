@@ -11,3 +11,4 @@ data/*
 .Rproj.user
 *.Rproj
 .RData
+*.swp
