@@ -6,3 +6,11 @@
 
 # R data files from past sessions
 .Rdata
+
+# Extraneous project related files
+*.zip
+archive/*
+data/*
+.Rproj.user
+*.Rproj
+.RData
